@@ -1,6 +1,6 @@
 const counterElement = document.getElementById('profile-view-counter');
 
-// Fetch the profile view count
+// Fetch profile view count
 async function fetchProfileViews() {
     try {
         const response = await fetch('../assets/counter.json');
@@ -17,9 +17,9 @@ async function incrementProfileViews(currentViews) {
     const newViews = currentViews + 1;
     counterElement.innerText = newViews;
 
-    // Save the new count to the JSON file (simulated here, requires a backend in production)
-    console.log(`New view count: ${newViews}`);
+    // Simulate updating the counter (requires backend in production)
+    console.log(`New profile views: ${newViews}`);
 }
 
-// Initialize the counter
+// Initialize
 fetchProfileViews();
