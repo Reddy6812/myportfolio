@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
     <header>
         <div class="container">
             <h1>Vijay Kumar Reddy Gade</h1>
-            <p>Researcher | Developer | AI Enthusiast</p>
+            <p id="typing"></p>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -28,6 +32,7 @@
         </div>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -35,34 +40,39 @@
         </div>
     </section>
 
-    <section id="profile-views">
+    <!-- 3D Cube Section -->
+    <section id="three-d">
         <div class="container">
-            <h2>Profile Views</h2>
-            <p>Your profile has been viewed <span id="profile-view-counter">0</span> times.</p>
+            <h2>Interactive 3D Cube</h2>
+            <canvas id="three-canvas"></canvas>
         </div>
     </section>
 
-    <section id="work">
+    <!-- Charts Section -->
+    <section id="charts">
         <div class="container">
-            <h2>Work</h2>
-            <p>Click the button below to view my work:</p>
-            <a href="portfolio/pages/work.html" class="button">View Work</a>
+            <h2>Project Statistics</h2>
+            <canvas id="skillsChart"></canvas>
         </div>
     </section>
 
-    <section id="resume">
-        <div class="container">
-            <h2>Resume</h2>
-            <p>Click the button below to view or download my resume:</p>
-            <a href="portfolio/pages/resume.html" class="button">View Resume</a>
-        </div>
-    </section>
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="#about" class="floating-btn">About</a>
+        <a href="#three-d" class="floating-btn">3D Cube</a>
+        <a href="#charts" class="floating-btn">Charts</a>
+    </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Vijay Kumar Reddy Gade. All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="portfolio/scripts/main.js"></script>
     <script src="portfolio/scripts/counter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body>
 </html>
