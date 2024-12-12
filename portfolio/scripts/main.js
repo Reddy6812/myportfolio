@@ -29,3 +29,4 @@ themeToggle.addEventListener('click', function () {
         icon.classList.add('fa-moon');
     }
 });
+
