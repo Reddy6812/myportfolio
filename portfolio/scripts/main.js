@@ -36,24 +36,20 @@ function loopTyping() {
 }
 loopTyping();
 
-// 3D Cube with Three.js
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas') });
-renderer.setSize(window.innerWidth, 300);
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-camera.position.z = 5;
+// Scroll Reveal
+function revealSections() {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(section => {
+        const windowHeight = window.innerHeight;
+        const sectionTop = section.getBoundingClientRect().top;
+        const revealPoint = 150;
 
-function animate() {
-    requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    renderer.render(scene, camera);
+        if (sectionTop < windowHeight - revealPoint) {
+            section.classList.add('visible');
+        }
+    });
 }
-animate();
+window.addEventListener('scroll', revealSections);
 
 // Project Statistics Chart
 const ctx = document.getElementById('skillsChart').getContext('2d');
