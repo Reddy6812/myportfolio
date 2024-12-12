@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vijay Kumar Reddy Gade - Portfolio Website">
     <title>Vijay Kumar Reddy Gade | Portfolio</title>
     <link rel="stylesheet" href="portfolio/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,16 +12,18 @@
     <div id="particles-js"></div>
 
     <!-- Header -->
-    <header>
+    <header class="fade-in">
         <div class="container">
             <h1>Vijay Kumar Reddy Gade</h1>
             <p id="typing"></p>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="portfolio/pages/work.html">Work</a></li>
-                    <li><a href="portfolio/pages/resume.html">Resume</a></li>
-                    <li><a href="portfolio/pages/contact.html">Contact</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <!-- Dark Mode Toggle -->
@@ -33,38 +34,102 @@
     </header>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="reveal">
         <div class="container">
             <h2>About Me</h2>
-            <p>I am passionate about building innovative AI solutions, analyzing complex datasets, and applying machine learning techniques to solve real-world problems.</p>
+            <p>I am a passionate researcher and developer with expertise in deep learning, NLP, and data engineering. I specialize in building innovative solutions that bridge technology and real-world problems.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +1 (352)-709-6512</p>
+                <p><i class="fas fa-envelope"></i> vi.gade@ufl.edu</p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/vijayreddy6812/" target="_blank">linkedin.com/in/vijayreddy6812</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/Reddy6812" target="_blank">github.com/Reddy6812</a></p>
+            </div>
         </div>
     </section>
 
-    <!-- 3D Cube Section -->
-    <section id="three-d">
+    <!-- Experience Section -->
+    <section id="experience" class="reveal">
         <div class="container">
-            <h2>Interactive 3D Cube</h2>
-            <canvas id="three-canvas"></canvas>
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>University of Florida | Research Assistant</h3>
+                <p><i>July 2024 – Present</i></p>
+                <ul>
+                    <li>Developed deep learning models for drug design, optimizing small molecules and proteins.</li>
+                    <li>Implemented GPT-based models for predicting molecular interactions.</li>
+                    <li>Analyzed large multi-omics data, EHR, and medical imaging datasets.</li>
+                    <li>Collaborated on integrating AI into drug pipelines using AWS and Git.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>DBYDX Technologies Private Limited | Data Science Intern</h3>
+                <p><i>April 2022 – April 2023</i></p>
+                <ul>
+                    <li>Improved data processing by 40% using Scikit-learn and Numpy.</li>
+                    <li>Optimized NLP models for intent detection, enhancing user engagement by 50%.</li>
+                    <li>Developed machine learning models for Quora’s Question Similarity.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Charts Section -->
-    <section id="charts">
+    <!-- Projects Section -->
+    <section id="projects" class="reveal">
         <div class="container">
-            <h2>Project Statistics</h2>
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Drowsiness Detection System</h3>
+                <p>Developed a 95%-accurate drowsiness detection system using DLIB and facial landmarks for real-time alerts.</p>
+            </div>
+            <div class="project-card">
+                <h3>COVID-19 Detection</h3>
+                <p>Built a classifier to detect COVID-19 from X-rays, categorizing images into 4 classes, with segmentation capabilities.</p>
+            </div>
+            <div class="project-card">
+                <h3>Face Recognition Attendance System</h3>
+                <p>Implemented a CNN-based system achieving over 95% accuracy for face recognition attendance tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="reveal">
+        <div class="container">
+            <h2>Skills</h2>
             <canvas id="skillsChart"></canvas>
         </div>
     </section>
 
-    <!-- Floating Buttons -->
-    <div class="floating-buttons">
-        <a href="#about" class="floating-btn">About</a>
-        <a href="#three-d" class="floating-btn">3D Cube</a>
-        <a href="#charts" class="floating-btn">Charts</a>
-    </div>
+    <!-- Education Section -->
+    <section id="education" class="reveal">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>University of Florida</h3>
+                <p>Master of Science in Computer Science (2023 – 2025)</p>
+            </div>
+            <div class="education-item">
+                <h3>Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya</h3>
+                <p>Bachelor of Engineering in Computer Science and Engineering (2018 – 2022)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="reveal">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/{your-form-id}" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="fade-in">
         <p>&copy; 2024 Vijay Kumar Reddy Gade. All rights reserved.</p>
     </footer>
 
@@ -73,6 +138,5 @@
     <script src="portfolio/scripts/counter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body>
 </html>
