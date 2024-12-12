@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vijay Kumar Reddy Gade - Portfolio Website">
     <title>Vijay Kumar Reddy Gade | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <header>
@@ -23,6 +22,10 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <!-- Dark Mode Toggle -->
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
@@ -34,7 +37,6 @@
                 and applying machine learning techniques to solve real-world problems. 
                 With expertise in research and development, I bring ideas to life through cutting-edge technologies.
             </p>
-            <img src="assets/images/profile.jpg" alt="Profile Picture" class="profile-img">
         </div>
     </section>
 
@@ -43,19 +45,14 @@
             <h2>My Work</h2>
             <div class="work-grid">
                 <div class="work-item" data-aos="zoom-in">
-                    <img src="assets/images/project1.jpg" alt="Project 1">
+                    <img src="portfolio/assets/images/project1.jpg" alt="Project 1">
                     <h3>Drowsiness Detection System</h3>
                     <p>A highly accurate system using DLIB and Python for real-time detection.</p>
                 </div>
                 <div class="work-item" data-aos="zoom-in">
-                    <img src="assets/images/project2.jpg" alt="Project 2">
+                    <img src="portfolio/assets/images/project2.jpg" alt="Project 2">
                     <h3>COVID-19 Detection</h3>
                     <p>Classifying chest X-rays with TensorFlow and SimpleITK for enhanced medical diagnostics.</p>
-                </div>
-                <div class="work-item" data-aos="zoom-in">
-                    <img src="assets/images/project3.jpg" alt="Project 3">
-                    <h3>Face Recognition Attendance</h3>
-                    <p>Implemented a face recognition system using CNN with 95%+ accuracy.</p>
                 </div>
             </div>
         </div>
@@ -79,18 +76,22 @@
         <div class="container">
             <h2>Resume</h2>
             <p>Want to learn more about my experience? Click the button below to download or preview my latest resume:</p>
-            <button onclick="openModal()" class="resume-preview-button">Preview Resume</button>
-            <a href="assets/resume/Vijay_Kumar_Reddy_Gade_Resume.pdf" target="_blank" class="resume-button">
+
+            <!-- Resume Download -->
+            <a href="portfolio/assets/resume/vijay_resume.pdf" target="_blank" class="resume-button">
                 <span>Download Resume</span>
                 <span class="icon">📄</span>
             </a>
+
+            <!-- Resume Preview -->
+            <button onclick="openModal()" class="resume-preview-button">Preview Resume</button>
         </div>
 
         <!-- Modal -->
         <div id="resumeModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <iframe src="assets/resume/Vijay_Kumar_Reddy_Gade_Resume.pdf" width="100%" height="600px"></iframe>
+                <iframe src="portfolio/assets/resume/vijay_resume.pdf" width="100%" height="600px"></iframe>
             </div>
         </div>
     </section>
@@ -111,10 +112,6 @@
         <p>&copy; 2024 Vijay Kumar Reddy Gade. All rights reserved.</p>
     </footer>
 
-    <script src="scripts/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="portfolio/scripts/main.js"></script>
 </body>
 </html>
