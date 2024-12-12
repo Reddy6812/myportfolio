@@ -6,6 +6,7 @@
     <meta name="description" content="Vijay Kumar Reddy Gade - Portfolio Website">
     <title>Vijay Kumar Reddy Gade | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
@@ -25,28 +26,37 @@
         </div>
     </header>
 
-    <section id="about" data-aos="fade-up">
+    <section id="about" data-aos="fade-right">
         <div class="container">
             <h2>About Me</h2>
-            <p>I am passionate about building innovative AI solutions, analyzing complex datasets, and applying machine learning techniques to solve real-world problems. I thrive at the intersection of research and development, bringing ideas to life through code.</p>
+            <p>
+                I am passionate about building innovative AI solutions, analyzing complex datasets, 
+                and applying machine learning techniques to solve real-world problems. 
+                With expertise in research and development, I bring ideas to life through cutting-edge technologies.
+            </p>
+            <img src="assets/images/profile.jpg" alt="Profile Picture" class="profile-img">
         </div>
     </section>
 
-    <section id="work" data-aos="fade-up">
+    <section id="work" data-aos="fade-left">
         <div class="container">
             <h2>My Work</h2>
             <div class="work-grid">
-                <div class="work-item">
-                    <img src="images/project1.jpg" alt="Project 1">
+                <div class="work-item" data-aos="zoom-in">
+                    <img src="assets/images/project1.jpg" alt="Project 1">
                     <h3>Drowsiness Detection System</h3>
                     <p>A highly accurate system using DLIB and Python for real-time detection.</p>
                 </div>
-                <div class="work-item">
-                    <img src="images/project2.jpg" alt="Project 2">
+                <div class="work-item" data-aos="zoom-in">
+                    <img src="assets/images/project2.jpg" alt="Project 2">
                     <h3>COVID-19 Detection</h3>
                     <p>Classifying chest X-rays with TensorFlow and SimpleITK for enhanced medical diagnostics.</p>
                 </div>
-                <!-- Add more work items as needed -->
+                <div class="work-item" data-aos="zoom-in">
+                    <img src="assets/images/project3.jpg" alt="Project 3">
+                    <h3>Face Recognition Attendance</h3>
+                    <p>Implemented a face recognition system using CNN with 95%+ accuracy.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -65,7 +75,7 @@
         </div>
     </section>
 
-    <section id="resume" data-aos="fade-up">
+    <section id="resume" data-aos="fade-right">
         <div class="container">
             <h2>Resume</h2>
             <p>Want to learn more about my experience? Click the button below to download or preview my latest resume:</p>
@@ -101,17 +111,10 @@
         <p>&copy; 2024 Vijay Kumar Reddy Gade. All rights reserved.</p>
     </footer>
 
+    <script src="scripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
-
-        function openModal() {
-            document.getElementById('resumeModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('resumeModal').style.display = 'none';
-        }
     </script>
 </body>
 </html>
