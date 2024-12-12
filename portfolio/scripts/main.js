@@ -1,41 +1,31 @@
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Modal Functionality for Resume Preview
-const modal = document.getElementById('resumeModal');
-const closeModalButton = document.querySelector('.modal .close');
-
 // Open Modal
 function openModal() {
-    modal.style.display = 'flex';
+    document.getElementById('resumeModal').style.display = 'flex';
 }
 
 // Close Modal
 function closeModal() {
-    modal.style.display = 'none';
+    document.getElementById('resumeModal').style.display = 'none';
 }
 
 // Close Modal on Click Outside
 window.addEventListener('click', function (event) {
+    const modal = document.getElementById('resumeModal');
     if (event.target === modal) {
         closeModal();
     }
 });
 
-// Animate Elements on Scroll (Optional)
-window.addEventListener('scroll', function () {
-    const elements = document.querySelectorAll('[data-aos]');
-    elements.forEach(element => {
-        const rect = element.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.9) {
-            element.classList.add('aos-animate');
-        }
-    });
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    const icon = themeToggle.querySelector('i');
+    if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
 });
